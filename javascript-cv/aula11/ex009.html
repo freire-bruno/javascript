@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em qual país você mora?</title>
+</head>
+<body>
+    <h1>Em qual país você mora?</h1>
+    Digite aqui o seu país <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Confirmar" onclick="enviar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function enviar() {
+            var país = document.querySelector('input#txtpais')
+            var res = document.querySelector('div#res')
+            var coun = String(país.value)
+            res.innerHTML = `Você vive no(a) ${coun}.`
+            if (coun == 'Brasil') {
+                res.innerHTML += 'Você é Brasileiro'
+            } else {
+                res.innerHTML += 'Você é Estrangeiro'
+            }
+        }
+    </script>
+    
+</body>
+</html>
